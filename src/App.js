@@ -7,15 +7,17 @@ import AllMeetups from "./components/pages/AllMeetups";
 function App() {
   return (
     <div className='App'>
-      <Route path='/'>
-        <AllMeetups />
-      </Route>
-      <Route path='/favorites'>
-        <Favorites />
-      </Route>
-      <Route path='/newmeetups'>
-        <NewMeetups />
-      </Route>
+      <Switch>
+        <Route path='/'>
+          <AllMeetups />
+        </Route>
+        <Route path='/favorites'>
+          <Favorites />
+        </Route>
+        <Route path='/newmeetups'>
+          <NewMeetups />
+        </Route>
+      </Switch>
     </div>
   );
 }
