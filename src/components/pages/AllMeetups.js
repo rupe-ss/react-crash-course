@@ -1,7 +1,7 @@
 import React from "react";
 
 const AllMeetups = () => {
-  return <div>AllMeetUps</div>;
+  return <div className='allmeet'>AllMeetUps</div>;
 };
 
 export default AllMeetups;
