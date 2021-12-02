@@ -5,7 +5,7 @@ const FavoriteContext = createContext({
     totalFavorites: 0,
 });
 
-const FavoriteContextProvider = ({ children }) => {
+export const FavoriteContextProvider = ({ children }) => {
     const [userFavorites, setUserFavorites] = useState([]);
 
     const addFavoriteHandler = (favoriteMeetup) => {
@@ -16,7 +16,7 @@ const FavoriteContextProvider = ({ children }) => {
 
     const removeFavoriteHandler = (meetUpId) => {
         setUserFavorites((prevUserFavorites) => {
-            return prevUserFavorites.filter((meetup) => meetup.id === meetUpId);
+            return prevUserFavorites.filter((meetup) => meetup.id !== meetUpId);
         });
     };
 
